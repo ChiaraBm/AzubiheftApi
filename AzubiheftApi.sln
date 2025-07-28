@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzubiheftApi", "AzubiheftApi\AzubiheftApi.csproj", "{67BA4BD1-D05F-49A1-93DD-310AC78CB63E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzubiheftApi.Test", "AzubiheftApi.Test\AzubiheftApi.Test.csproj", "{6A34B8E4-F135-4571-B77F-4502D06E67AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67BA4BD1-D05F-49A1-93DD-310AC78CB63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BA4BD1-D05F-49A1-93DD-310AC78CB63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BA4BD1-D05F-49A1-93DD-310AC78CB63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BA4BD1-D05F-49A1-93DD-310AC78CB63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A34B8E4-F135-4571-B77F-4502D06E67AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A34B8E4-F135-4571-B77F-4502D06E67AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A34B8E4-F135-4571-B77F-4502D06E67AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A34B8E4-F135-4571-B77F-4502D06E67AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
