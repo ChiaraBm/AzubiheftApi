@@ -1,4 +1,5 @@
 ﻿using AzubiheftApi;
+using AzubiheftApi.Models;
 
 var azubiheftClient = new AzubiheftClient();
 
@@ -7,8 +8,9 @@ var password = Environment.GetEnvironmentVariable("AH_PASSWORD")!;
 
 await azubiheftClient.Login(username, password);
 
-var data = await azubiheftClient.LoadDay(new DateOnly(2025, 07, 28));
+var weeks = await azubiheftClient.GetAllWeeks();
 
-var taskToDelete = data.Tasks.First(x => x.Content.Contains("delete me"));
-
-await azubiheftClient.DeleteTask(101, new DateOnly(2025, 07, 28), taskToDelete);
+foreach (var week in weeks.Where(x => x.Number >= 62 && x.Number <= 99))
+{
+    await azubiheftClient.SendToTrainer(week.Number);
+}

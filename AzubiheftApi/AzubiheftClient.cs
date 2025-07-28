@@ -295,6 +295,18 @@ public class AzubiheftClient : IDisposable
         await HttpClient.PostAsync(url, multipartFormContent);
     }
 
+    public async Task SendToTrainer(int number)
+    {
+        var sendForm = new MultipartFormDataContent();
+        
+        sendForm.Add(new StringContent(number.ToString()), "NachweisNr");
+        sendForm.Add(new StringContent("true"), "chkAusb");
+        sendForm.Add(new StringContent("false"), "chkBeauft");
+        sendForm.Add(new StringContent("false"), "chkExtAusb");
+        
+        await HttpClient.PostAsync("https://www.azubiheft.de/Azubi/AjaxBRfreigabe.ashx", sendForm);
+    }
+
     private ReportTaskType ParseReportTaskType(string name)
     {
         if (name.Contains("Betrieb"))
